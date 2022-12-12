@@ -214,6 +214,9 @@ a:hover {
 .textChapters {
     padding: 40px 0px 40px;
     margin: 0 15%;
+    align-items: center;
+    justify-content: center;
+    display: block;
 }
 
 #one,
@@ -224,8 +227,13 @@ a:hover {
 }
 
 .textChapters img {
-    width: 100%;
-    margin-top: 30px;
+    width: 50%;
+    margin: 30px 25% 0 25%;
+}
+
+.textChapters figcaption {
+    width: 50%;
+    margin: 0 auto 50px auto;
 }
 
 /* ---------------------------- */
@@ -985,6 +993,16 @@ legend {
         margin: 0 5%;
     }
 
+    
+    .textChapters img {
+        width: 70%;
+        margin: 30px 15% 0 15%;
+    }
+    
+    .textChapters figcaption {
+        width: 70%;
+    }
+
     .startBanner {
         height: 50vh;
         padding: 0 20px;
@@ -1105,6 +1123,15 @@ legend {
         width: 100%;
     }
 
+    .textChapters img {
+        width: 86%;
+        margin: 30px 7% 0 7%;
+    }
+    
+    .textChapters figcaption {
+        width: 86%;
+    }
+
 }
 
 @media (max-width: 450px) {
@@ -1167,6 +1194,15 @@ legend {
 
     .ComeSecond {
         font-size: 20px;
+    }
+
+    .textChapters img {
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+    
+    .textChapters figcaption {
+        width: 100%;
     }
 
 }
