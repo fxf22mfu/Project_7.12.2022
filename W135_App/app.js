@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -19,6 +20,8 @@ app.get('/', (req, res) => {
     })
 });
 
+
+
 app.post('/contact', jsonParser, (req, res) => {
     const body = req.body;
     const firstname = body.firstname;
@@ -26,5 +29,17 @@ app.post('/contact', jsonParser, (req, res) => {
     const email = body.email;
     const phone = body.phone;
     const message = body.message;
-    res.send('POST by contact.js' + '\n' + firstname + ' ' + lastname + '\n' + email + '\n' + phone + '\n' + message);
+    
+    const registered = JSON.stringify(body);
+    
+    
+    fs.appendFile('registry.txt', registered+'\n', err => {
+        if(err){
+            console.err;
+            return;
+        }
+        console.log("your details have been registered");
+    })
+    res.send("That's it! You're message has been sent");
+    // res.send('POST by contact.js' + '\n' + register);
 });
