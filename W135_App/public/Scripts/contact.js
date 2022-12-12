@@ -1,3 +1,6 @@
+
+
+//Form Code
 function onTextReady(text) {
     const PostMessage = document.getElementById('post-response');
     PostMessage.innerHTML = text;
@@ -5,6 +8,7 @@ function onTextReady(text) {
 }
 
 function onResponse(response) {
+
     return response.text();
 }
 
